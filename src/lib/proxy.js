@@ -4,7 +4,6 @@ const logger = require('./logger');
 module.exports = function proxy(url) {
   return httpProxy(url, {
     timeout: 10000,
-    preserveHostHdr: true,
     proxyReqPathResolver: (req) => req.originalUrl,
     proxyErrorHandler: (err, res, next) => {
       logger.error(err);

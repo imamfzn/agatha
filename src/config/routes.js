@@ -1,9 +1,9 @@
-const { authorizeLogin } = require('../middlewares');
+const { authorize } = require('../middlewares');
 
 module.exports = {
   '/users': {
     url: process.env.INSAN_URL || 'http://localhost:3002',
-    middlewares: [authorizeLogin],
+    middlewares: [...authorize()],
   },
   '/auth': {
     url: process.env.AUTAN_URL || 'http://localhost:3001',

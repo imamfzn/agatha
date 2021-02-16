@@ -48,7 +48,7 @@ Below is how to spin up all services in our local environment. It's recomended t
   username: gatotkaca
   password: rahasiabanget
   ```
-7. for more information about all endpoints that can we used, just look at swagger documentation on `http://localhost:8000/docs`
+7. for more information about all endpoints, just look at swagger documentation on `http://localhost:8000/docs`
 
 8. Good Luck!
 

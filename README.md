@@ -7,6 +7,10 @@ Agatha is a simple api gateway that fronted [Autan](https://github.com/imamfzn/a
 * [Autan](https://github.com/imamfzn/autan), to authenticate client, generate refresh token, and revoke refresh token.
 * [Insan](https://github.com/imamfzn/insan), all CRUD operation about user details.
 
+# Service Architecture
+
+![](docs/services-architecture.png)
+
 # API Spec / Documentation
 
 Let's look api documentation at https://agatha0.herokuapp.com/docs. That documentation is deployed on Heroku free tier. So at the first time you entering that web / endpoint, it will be really slow. If u got timeout, just refresh / retry again your request.
@@ -62,9 +66,6 @@ Below is how to spin up all services in our local environment. It's recomended t
 5. Setup all env values (look at `env.sample`)
 6. Run `npm start`
 
-# Service Architecture
-![](docs/services-architecture.png)
-
 # Flow
 
 ## Login
@@ -78,4 +79,3 @@ Below is how to spin up all services in our local environment. It's recomended t
 
 ## CRUD
 ![](docs/crud-flow.png)
-

@@ -10,9 +10,9 @@ function authorize(roles = []) {
     jwt,
 
     // authorize user role
-    async function (req, res, next) {
+    function (req, res, next) {
       if (!req.user || (roles.length && !roles.includes(req.user.role))) {
-        res.status(401).json({ message: 'Unauthorized' });
+        res.status(401).json({ message: 'You aren\'t authorize to access this' });
         return;
       }
 

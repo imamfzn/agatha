@@ -1,8 +1,4 @@
-const jwt = require('express-jwt');
-
-function getToken(req) {
-  return req.headers['x-access-token'] || req.headers.authorization;
-}
+const jwt = require('./jwt');
 
 function authorize(roles = []) {
   if (typeof roles === 'string') {
@@ -11,7 +7,7 @@ function authorize(roles = []) {
 
   return [
     // authenticate jwt token
-    jwt({ secret: process.env.ACCESS_TOKEN_SECRET, algorithms: ['HS256'], getToken }),
+    jwt,
 
     // authorize user role
     async function (req, res, next) {

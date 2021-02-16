@@ -9,7 +9,9 @@ Agatha is a simple api gateway that fronted [Autan](https://github.com/imamfzn/a
 
 # API Spec / Documentation
 
-Let's look api documentation at https://agatha0.herokuapp.com/docs. That documentation is deployed on Heroku free tier. So at the first time you entering that web / endpoint, it will be really slow. If u got timeout, just refresh / retry again your request :).
+Let's look api documentation at https://agatha0.herokuapp.com/docs. That documentation is deployed on Heroku free tier. So at the first time you entering that web / endpoint, it will be really slow. If u got timeout, just refresh / retry again your request.
+
+If you want to try using admin / user role credentials, just ask me and please use it wisely :).
 
 # How-To
 Below is how to spin up all services in our local environment. It's recomended to spin up using docker-compose.

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agatha
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agatha
+  template:
+    metadata:
+      labels:
+        app: agatha
+    spec:
+      containers:
+      - name: agatha
+        image: agatha:0.1.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - configMapRef:
+            name: agatha

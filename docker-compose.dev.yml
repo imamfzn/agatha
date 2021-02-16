@@ -1,0 +1,34 @@
+version: "3"
+services:
+  agatha:
+    image: agatha:0.1.0
+    ports:
+    - 8000:8000
+    environment:
+    - ACCESS_TOKEN_SECRET=secret
+    - AUTAN_URL=http://autan:3000
+    - INSAN_URL=http://insan:3000
+  autan:
+    image: autan:0.1.0
+    environment:
+    - ACCESS_TOKEN_SECRET=secret
+    - AUTAN_URL=http://autan:3000
+    - BASIC_AUTH_USER=autan
+    - BASIC_AUTH_PASSWORD=autan
+    - MONGODB_URL=mongodb://mongodb/autan
+    depends_on:
+    - mongodb
+  insan:
+    image: insan:0.1.0
+    environment:
+    - ACCESS_TOKEN_SECRET=secret
+    - AUTAN_URL=http://autan:3000
+    - AUTAN_BASIC_USER=autan
+    - AUTAN_BASIC_PASSWORD=autan
+    - MONGODB_URL=mongodb://mongodb/insan
+    depends_on:
+    - mongodb
+  mongodb:
+    image: mongo:4.4.3
+    ports:
+    - 27020:27017

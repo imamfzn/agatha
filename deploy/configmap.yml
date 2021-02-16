@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: agatha
+data:
+  ACCESS_TOKEN_SECRET: secret
+  AUTAN_URL: http://autan:3000
+  INSAN_URL: http://insan:3000
